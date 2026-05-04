@@ -33,6 +33,8 @@
   // ── Bibliography ───────────────────────────────────────────────────────────
   // Accepts a single path or an array: ("refs.bib", "more.yaml")
   library_paths: "refs.bib",
+  // can be set to all available styles listed here: https://typst.app/docs/reference/model/bibliography/
+  citation_style: "ieee",
 
   // ── Abstract ───────────────────────────────────────────────────────────
   abstract: (

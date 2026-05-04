@@ -1,4 +1,6 @@
 // LTeX: enabled=false
+// Author: Felix Penn 
+// In case of any questions, additions or bugs please visit https://github.com/fslyy/DHBW_Typst
 // The Template was created with the Help of "Hinweise zur Anfertigung von Projekt- und Bachelorarbeiten 2.0"
 
 #import "@preview/glossarium:0.5.9": (
@@ -41,6 +43,7 @@
   supervisor_university: none,
   abstract: (),
   library_paths: (),
+  citation_style: "ieee",
   acronyms: (),
   // ── Cover page: degree statement ────────────────────────────────────────
   degree: "Bachelor of Science (B. Sc.)",
@@ -64,6 +67,10 @@
   )
 
   // ── Headings ─────────────────────────────────────────────────────────────
+  // in german the standard word for chapter is "Abschnitt".
+  // If you prefer it to be referenced via "Kapiel" add 
+  // `supplement: [Kapitel]` 
+  // to your set heading command
   set heading(numbering: "1.")
   show heading: set text(font: "Times New Roman")
 
@@ -358,11 +365,14 @@
 
   set page(header: none)
 
-  set heading(numbering: (..nums) => {
-    let n = nums.pos()
-    if n.len() == 2      { numbering("A.",   n.at(1)) }
-    else if n.len() >= 3 { numbering("A.1.", n.at(1), ..n.slice(2)) }
-  })
+  set heading(
+    supplement: t("appendix"),
+    numbering: (..nums) => {
+      let n = nums.pos()
+      if n.len() == 2      { numbering("A",    n.at(1)) }
+      else if n.len() >= 3 { numbering("A.1.", n.at(1), ..n.slice(2)) }
+    },
+  )
   show heading.where(level: 2): it => {
     pagebreak(weak: true)
     set text(size: 14pt, weight: "bold")
@@ -381,7 +391,7 @@
   }
   [#[] <__appendix-end>]
 
-  bibliography(library_paths, title: t("list-bibliography"))
+  bibliography(library_paths, title: t("list-bibliography"), style: citation_style)
 
   {
     import "assets/index_of_attachments.typ": indexOfAttachmentsWith
