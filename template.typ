@@ -239,6 +239,17 @@
   }
   pagebreak()
 
+  // ── Abstracts ────────────────────────────────────────────────────────────
+  for a in abstract {
+    let (abstract_lang, abstract_body) = a
+      align(center, heading(outlined: false, numbering: none, [#text(
+          0.85em,
+          smallcaps[Abstract],
+        ) ]))
+      text(lang: abstract_lang, abstract_body)
+      pagebreak()
+  }
+
   // ── Frontmatter: Roman page numbering ────────────────────────────────────
   counter(page).update(1)
   set page(
@@ -250,17 +261,6 @@
     },
     footer-descent: 0.75cm,
   )
-
-  // ── Abstracts ────────────────────────────────────────────────────────────
-  for a in abstract {
-    let (abstract_lang, abstract_body) = a
-      align(center, heading(outlined: false, numbering: none, [#text(
-          0.85em,
-          smallcaps[Abstract],
-        ) ]))
-      text(lang: abstract_lang, abstract_body)
-      pagebreak()
-  }
 
   // ── Table of contents ─────────────────────────────────────────────────────
   [#show outline.entry.where(level: 1): it => {
