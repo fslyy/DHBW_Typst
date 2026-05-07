@@ -3,10 +3,6 @@
     en: "Index of Attachments",
     de: "Beigabenverzeichnis",
   ),
-  source-texts:   (en: "Source texts",          de: "Quelltexte"),
-  project-docs:   (en: "Project documentation", de: "Projektdokumentationen"),
-  electronic:     (en: "Electronic sources",    de: "Elektronische Quellen"),
-  misc:           (en: "Miscellaneous",         de: "Sonstiges"),
 )
 
 #let indexOfAttachmentsWith(lang: "en") = [
@@ -18,15 +14,15 @@
   #set enum(numbering: "1.1.", full: true)
 
 // structure your attachment like so 
-// + Source texts
+// + SQuelltexte
 //    + source_code_1
 //    + source_code_2
-// + Project documentation
+// + Projektdokumentationen
 //    + documentation_1
 // ...
 
-  + #s("source-texts") 
-  + #s("project-docs") 
-  + #s("electronic") 
-  + #s("misc") 
+  + Quelltexte
+  + Projektdokumentationen
+  + Elektronische Quellen
+  + Sonstiges
 ]
