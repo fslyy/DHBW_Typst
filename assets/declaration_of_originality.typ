@@ -14,12 +14,10 @@
   type:            "Bachelor Thesis",
 ) = [
   #align(center)[
-    #heading(outlined: false, numbering: none)[Selbstständigkeitserklärung]
+    #heading(outlined: false, numbering: none)[Ehrenwörtliche Erklärung]
   ]
 
-  Ich versichere hiermit, dass ich die vorliegende Arbeit mit dem Thema:
-  #pad(title_long)
-  selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.
+  Ich versichere hiermit, dass ich die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet habe und diese Arbeit bei keiner anderen Prüfung mit gleichem oder vergleichbarem Inhalt vorgelegt habe und diese bislang nicht veröffentlich wurde.
 
   #v(0.8cm)
 
