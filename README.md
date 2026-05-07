@@ -4,10 +4,11 @@ A Typst template for project and bachelor theses at DHBW Karlsruhe, following th
 
 ## Requirements
 
-- [Typst](https://typst.app/) ≥ 0.14.2 — install via `winget install --id Typst.Typst` or from [typst.app/docs](https://typst.app/docs)
-- **Times New Roman** must be installed on your system (used for all body text)
+- [Typst](https://typst.app/) ≥ 0.14.2 
 
 Typst resolves packages automatically from the [Typst Universe](https://typst.app/universe) registry on first compile. No manual package installation is needed.
+
+Documentation is available under: https://typst.app/docs
 
 ## Quick start
 
